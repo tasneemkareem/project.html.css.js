@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة مراقبة المستشعرات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>لوحة مراقبة البلاط الذكي</h1>
+  </header>
+
+  <main>
+    <div class="sensor-status">
+      <h2>آخر إشعار:</h2>
+      <p id="sensorData">... في انتظار البيانات ...</p>
+    </div>
+
+    <div id="notifications" class="notifications-box"></div>
+  </main>
+
+  <footer>
+    <p>المشروع بإشراف فريق التحكم في المستشعرات</p>
+    <div>
+        <a href="contact.html">To contact the team supervisor</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

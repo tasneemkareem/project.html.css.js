@@ -11,7 +11,7 @@ function displayNotification(sensorData) {
     const notificationsDiv = document.getElementById('notifications');
     const notification = document.createElement('div');
     notification.className = 'notification';
-    notification.textContent = `${sensorData.name}: ${sensorData.value}`;
+    notification.textContent = ${sensorData.name}: ${sensorData.value};
     notificationsDiv.prepend(notification);
 
     setTimeout(() => {
@@ -21,6 +21,6 @@ function displayNotification(sensorData) {
 
 setInterval(() => {
     const data = simulateSensorData();
-    document.getElementById("sensorData").textContent = `${data.name}: ${data.value}`;
+    document.getElementById("sensorData").textContent = ${data.name}: ${data.value};
     displayNotification(data);
 }, 3000);

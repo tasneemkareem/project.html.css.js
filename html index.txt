@@ -39,7 +39,7 @@
 
  <figure>
   <img src=https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image2.jpeg alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
-        <figcaption> "بمنطقة "ويست إنBird)  جزء من شارع) وتشارك الشركة في أول شارع ذكي بالعالم في لندن، وتعمل على تطبيق تقنيتها في حديقة جديدة بالقرب من البيت (West End)  الأبيض في واشنطن، حسبما أعلنت الشركة </figcaption>
+        <figcaption> بمنطقة ويست إن جزء من شارع و تشارك الشركة في أول شارع ذكي بالعالم في لندن و تعمل علي تطبيق تقنيتها في حديقة جديدة بالقرب من البيت الابيض في واشنطن حسبما اعلنت الشركة</figcaption>
 
 </figcaption>
 

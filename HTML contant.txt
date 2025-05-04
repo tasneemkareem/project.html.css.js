@@ -28,7 +28,7 @@
     <script>
         
         const urlParams = new URLSearchParams(window.location.search);
-        const esp32Id = urlParams.get('id'); // الـ ID المرسل من ESP32
+        const esp32Id = urlParams.get('id'); 
 
         
         if (esp32Id) {

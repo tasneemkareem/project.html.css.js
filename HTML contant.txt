@@ -9,7 +9,7 @@
 <body>
 
     <h1>Contact Us</h1>
-    <form action="submit_contact.php" method="POST">
+    <form action="submit_contact.php" method="POST" id="contactForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -19,8 +19,22 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
+        
+        <input type="hidden" id="esp32_id" name="esp32_id">
+
         <input type="submit" value="Submit">
     </form>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const esp32Id = urlParams.get('id'); // الـ ID المرسل من ESP32
+
+        
+        if (esp32Id) {
+            document.getElementById('esp32_id').value = esp32Id;
+        }
+    </script>
 
 </body>
 </html>

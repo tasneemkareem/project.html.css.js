@@ -6,5 +6,9 @@ CREATE TABLE ContactMessages (
     message NVARCHAR(MAX)
 );
 
-select * from ContactMessages
 
+
+ALTER TABLE ContactMessages
+ADD Esp32ID NVARCHAR(100);
+
+select * from ContactMessages

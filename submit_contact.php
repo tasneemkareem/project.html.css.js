@@ -17,7 +17,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $esp32_id = $_POST['esp32_id']; 
-
+$PassWord =$_post['PassWord'];
 
 $sql = "INSERT INTO ContactMessages (Name, Email, PassWord, Message, Esp32ID) VALUES (?, ?, ?, ?, ?)";
 $params = [$name, $email, $password, $message, $esp32_id]; 

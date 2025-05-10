@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة مراقبة البلاط الذكي</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+    <h1>مرحباً <?php echo $_SESSION['user']; ?>!</h1>
+    <h2>لوحة مراقبة البلاط الذكي</h2>
+  </header>
+
+  <main>
+    <div class="sensor-status">
+      <h2>آخر إشعار:</h2>
+      <p id="sensorData">... في انتظار البيانات ...</p>
+    </div>
+
+    <div id="notifications" class="notifications-box"></div>
+
+    <div class="image-container">
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image1.png" style="width:300px;">
+        <figcaption>عند السير فوق هذه البلاطات تتحول الخطوات إلى عملة رقمية يحصل عليها الشخص كمكافأة نظير استخدامه هذا النظام...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image2.jpeg" style="width:300px;">
+        <figcaption>بمنطقة ويست إن جزء من شارع و تشارك الشركة في أول شارع ذكي بالعالم في لندن...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image3.jpeg" alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
+        <figcaption>وقال ويل بروك، محلل اتصالات بالشركة: "اشتركت هذه الشركة مع جوجل في إنشاء أكبر مصفوفة لجمع البيانات والطاقة...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image4%20.jpeg" alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
+        <figcaption>يتكون سطح الشركة من سلسلة من المثلثات المتشابكة، ونسختها أكثر تقدما...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image5.jpeg" alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
+        <figcaption>وتحتوي كل بلاطة على أجهزة استشعار ومنارات بلوتوث منخفضة الطاقة...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image6%20.jpeg" alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
+        <figcaption>وعند السير فوق هذه البلاطات أيضا تتحول الخطوات إلى عملة رقمية يحصل عليها الشخص كمكافأة...</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/tasneemkareem/project.html.css.js/main/image7.jpeg" alt="رسم توضيحي لفكرة المشروع" style="width:300px;">
+        <figcaption>وقال لورنس كيمبل كوك، المؤسس والمدير التنفيذي للشركة: "الأشخاص أيضا وليست التكنولوجيا فقط هم من سيجعلون مدننا ذكية"...</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>© فريق المشروع - 2025</p>
+  </footer>
+
+  <script>
+    async function fetchNotification() {
+      try {
+        const response = await fetch('get_latest_notification.php');
+        const data = await response.text();
+        document.getElementById('sensorData').textContent = data;
+      } catch (e) {
+        document.getElementById('sensorData').textContent = 'تعذر تحميل الإشعار';
+      }
+    }
+    setInterval(fetchNotification, 5000);
+    fetchNotification();
+  </script>
+</body>
+</html>
